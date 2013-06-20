@@ -33,9 +33,9 @@
 
 
 (def gen-nested-css (rest sel prev)
-  `(do (css ,(string (if sel sel) " " (car rest))
+  `(css ,(string (if sel sel) " " (car rest))
           ,(join prev (cadr rest))
-          ,(if (cddr rest) (cddr rest)))))
+          ,(if (cddr rest) (cddr rest))))
 
 (def gen-css-properties (plist)
   (print-properties
